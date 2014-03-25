@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="infles-exercise">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+		
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+
+    	<script src="/scripts/ng-videosharing-embed.min.js"></script>
+    	<script src="/scripts/infles.js"></script>
+		<script src="/scripts/exercise.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head >
+	
+<body ng-controller="UserCtrl">
+	<navigation></navigation>
+<div id="inhoud">
+<div ng-controller="ExerciseCtrl">
+
+	<ng-include src="'/exercises/' + exercise + '.html'"></ng-include>
+
+	
+	<button id="opslaan" class="btn btn-default" ng-click="save()">Opslaan</button>
+</div>
+</div>
+</div>
+</body>
+
+</html>

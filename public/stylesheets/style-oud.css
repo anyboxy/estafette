@@ -1,0 +1,107 @@
+h3 {
+	text-transfom: uppercase;
+	color: black;
+}
+
+body {
+width: 1040px;
+margin-left:auto;
+margin-right:auto;
+}
+
+header {
+width: 100%;
+height: 100px;
+/*background-color:yellow;*/
+}
+
+#DashboardCtrl {
+width: 200px;
+height:100%;
+/*background-color:yellow;*/
+color: black;
+}
+
+#question {
+/*
+background-color: #f0ffff;
+*/
+}
+
+
+/*#open-question {
+background-color: #00bf00;
+}
+
+#text-question{
+background-color: #ffbf00;
+}
+
+#video-question{
+background-color: #cccccc;
+} */
+
+#open-question, #text-question, #video-question{
+padding: 10px;
+margin: 20px; 
+}
+
+/*
+textarea{
+background-color: #00bfcc;
+width: 98%;
+position: center; 
+height: 150px;
+}
+
+
+button  {
+font-weight: bold;
+}
+*/
+
+ul {
+list-style: none;
+}
+
+#icon{
+width: 10px;
+height: 10px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+
+#login{
+width: 600px;
+}
+
+/*
+#loginText{
+width: 200px;
+margin-left: 30px;
+position: right; 
+}
+
+#loginTitle{
+width: 100px;
+margin-right: 0px;
+text-align: right;
+}
+*/
+
+tr{
+height: 50px;
+}
+
+td{
+text-align: right; 
+}
+
+#buttonInlog{
+text-align: left;
+padding-top: 9px;
+}

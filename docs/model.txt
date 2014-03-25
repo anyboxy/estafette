@@ -1,0 +1,62 @@
+In dit bestand staan de gebruikte data moddelen beschreven.
+
+Elk object heeft het veld _id met een unieke waarde
+
+Exercise
+Een exersise is een opdracht bestaande uit meerdere deelopdrachten. De excersise bepaalt wanneer een opdracht zichtbaar is voor leerlingen en wat de uiterlijke inleverdatum is.
+De performers zijn degene die de opdracht moeten uitvoeren. Dat kunnen zowel leerlingen zijn (begin met user_) en complete klassen (begin met class_)
+De depencendies zijn de opdrachten die afgerond moeten zijn voordat deze opdracht zichtbaar wordt voor een leerling.
+Een exercise die hidden is wordt altijd verborgen voor leerlingen en moet dus eerst nog vrijgegeven worden.
+
+Voorbeeld:
+{
+	"_id": "A1",
+	"name": "1 onstaan kerk",
+	"year": 33
+}
+
+
+Subexcersise
+
+Subexcersises bepalen hoe een opdracht eruit komt te zien. In de subexercises wordt de opdracht in de meest simpele stukjes opgedeeld. Zoals een tekst lezen, een open vraag beantwoorden of een filmpje kijken. De exercise verwijst naar de opdracht waartoe deze subexercise behoord. Content is afhanelijk van het type.
+
+Voorbeeld:
+{
+	"_id": "B1",
+	"exercise": "A1",
+	"type": "open-question" (type zou bijvoorbeeld kunnen zijn: open-question/text/video)
+	"title": "Opdracht 1",
+	"content: "naam?" (afhankelijk van type)
+}
+
+
+User
+
+Een gebruiker heeft een rol (leraar of leerling). Ook behoort elke gebruiker tot een 1 of meer klassen.
+
+Voorbeeld:
+{
+	"_id": "110259",
+	"password": "3751ZK",
+	role: "teacher", (teacher/pupil)
+	classes: ["b1a", "b1c"]
+}
+
+{
+	"_id": "110259",
+	"password": "3751ZK",
+	role: "teacher",
+	classes: ["B1A"]
+}
+
+Answer:
+
+Een antwoord wordt voor elke gebruiker per subexcersise opgeslagen in de database het antwoord is afhankelijk van de subexercise. Deze user is de leerling die de vraag gemaakt heeft
+
+Voorbeeld:
+{
+	"_id": "C1",
+	"subexercise": "B1"
+	"user": "110259"
+	answer: "42 koekjes en 5 appels"
+}

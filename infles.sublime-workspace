@@ -1,0 +1,365 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tempFilter",
+				"tempFilter"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/scripts/exercise.js",
+			"settings":
+			{
+				"buffer_size": 1199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "exercise.html",
+			"settings":
+			{
+				"buffer_size": 1122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1264,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api.js",
+			"settings":
+			{
+				"buffer_size": 5943,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Nodejs/Nodejs.sublime-build",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jonathanheek/Dropbox/inf lesmethode/upload.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/upload.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/exercise.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercises/hoofdstuk8.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercises/hoofdstuk1.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercises/onstaankerk.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/ng-videosharing-embed.min.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/api.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercises/hoofdstuk9.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/login.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/app.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercises/index.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/exercise.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/test/hoofdstuk1.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/infles.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/dashboard.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/dashboard.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/exerciseEditor.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/login.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/docs/model.txt",
+		"/Users/jonathanheek/.Trash/Alles wat de site moet kunnen.docx",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/ontwerp/Alles wat de site moet kunnen.docx",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/db.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/html editors.docx",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/exercise.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/login.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/dashboard.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/Icon",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/excercise.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/excercise.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/infles.sublime-workspace",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/stylesheets/style.css",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/.dropbox",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/home.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/home_dashboard.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/startserver.cmd",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/infles.sublime-project",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/test/index.html",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/scripts/home.js",
+		"/Users/jonathanheek/Dropbox/inf lesmethode/public/drawables/cross_small.png",
+		"/Users/jonathanheek/workspace/xvl/public/scripts/home.js",
+		"/Users/jonathanheek/workspace/xvl/package.json",
+		"/Users/jonathanheek/workspace/xvl/app.js",
+		"/Users/jonathanheek/workspace/xvl/public/test/index.html",
+		"/Users/jonathanheek/workspace/xvl/public/xvl/xvl-0.1.0.js",
+		"/Users/jonathanheek/workspace/xvl/public/home.html",
+		"/Users/jonathanheek/workspace/xvl/public/test/index.js",
+		"/Users/jonathanheek/workspace/xvl/public/home_collabrate.html",
+		"/Users/jonathanheek/workspace/xvl/public/home_simple.html",
+		"/Users/jonathanheek/workspace/xvl/xvl.sublime-project",
+		"/Users/jonathanheek/workspace/xvl/public/xvl/xvl-0.1.0.css",
+		"/Users/jonathanheek/workspace/xvl/public/xvl/sample_data.json",
+		"/Users/jonathanheek/workspace/xvl/public/index.html",
+		"/Users/jonathanheek/workspace/xvl/public/xvl/README",
+		"/Users/jonathanheek/workspace/xvl/public/collabrate.html",
+		"/Users/jonathanheek/Library/Application Support/Sublime Text 3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/Users/jonathanheek/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jonathanheek/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/jonathanheek/Dropbox/inf lesmethode"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"subExcercise",
+			"excercise",
+			"path"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"subExercise",
+			"exercise"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/scripts/exercise.js",
+					"settings":
+					{
+						"buffer_size": 1199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "exercise.html",
+					"settings":
+					{
+						"buffer_size": 1122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 1264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "api.js",
+					"settings":
+					{
+						"buffer_size": 5943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5457,
+								5457
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3160.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"home.js",
+				"public/scripts/home.js"
+			],
+			[
+				"samp",
+				"public/xvl/sample_data.json"
+			],
+			[
+				"xvl",
+				"public/xvl/xvl-0.1.0.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true
+}

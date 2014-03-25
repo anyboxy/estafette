@@ -1,0 +1,180 @@
+<!doctype html>
+<html ng-app="infles-exercise">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+		<script src="/scripts/infles.js"></script>
+		<script src="/scripts/exercise.js"></script>
+
+		<!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+	<body>
+		
+			<h1>Het ontstaan van de kerk</h1>
+			<h2>Opdracht 1</h2>
+			<img src="/drawables/smiley1.png" alt="Smiley face" height="42" width="42" style="float:left" > 
+			<p class="opdracht" style="float:left">
+				<ol type="a">
+					<li>
+						Werk in groepjes. Pak een groot vel papier. Zet in het midden het woord &#39;Kerk&#39;. Schrijf er met elkaar zoveel mogelijk woorden op die met de kerk te maken hebben. 
+						Wissel na 5 minuten je blad met het blad van een andere groep en vergelijk dit blad met jullie 	eigen blad. Vul eventueel woorden aan.
+					</li>
+					<li>
+						Bekijk het filmpje via: http://www.youtube.com/watch?v=FxW8Vhsl1_0
+					</li>
+					<li>
+						Wat is de kerk?<br>
+						<input ng-model="answers._1a"><br>
+					</li>
+					
+					<li>
+						Hoeveel kerken zijn er eigenlijk?<br>
+						<input ng-model="answers._1b"><br>
+					</li>
+				</ol>
+			</p>
+			
+			<h2>Opdracht 2</h2>
+			<p class="opdracht">
+				<p>Ga naar de website van jouw kerk en beantwoord de volgende vragen:</p>
+				<ol type="a" >
+					
+						
+					<li>
+						Hoe heet het kerkverband waar jij lid van bent?<br>
+						<input ng-model="answers._2a"><br>
+					</li>
+					<li>
+						Heeft jullie kerk een kerkenraad of oudstenraad?<br>
+						<input ng-model="answers._2b"><br>
+					</li>
+					<li>
+						Hoe heet de dominee of voorganger?
+						<input ng-model="answers._2c"><br>
+					</li>
+					<li>
+						Hoeveel diensten zijn er op zondag?
+						<input ng-model="answers._2d"><br>
+					</li>
+					<li>
+						Ben jij lid van een jeugdclub?
+						<input ng-model="answers._2e"><br>
+					</li>
+					<li>
+						Worden er leuke uitjes gepromoot.
+						<input ng-model="answers._2f"><br>
+					</li>
+					<li>
+						Spreekt de website jou aan. Waarom wel/niet?
+						<input ng-model="answers._2g"><br>
+					</li>
+				</ol>
+			</p>	
+
+			<h2>Kerk en jij</h2>
+			
+			<p>
+				Nu ben jij lid van een kerk. Het is heel normaal dat je daar naartoe gaat. Je hoort er immers bij. Toch is het best vreemd dat wij lid zijn van een kerk, terwijl de meeste mensen in Nederland geen lid zijn van een kerk. Waar komt de kerk eigenlijk vandaan? Wie heeft het verzonnen dat we daar iedere week naartoe gaan om elkaar te ontmoeten, maar belangrijker, om God te ontmoeten? Dat is een lang verhaal. We willen je daarom meenemen naar het begin van de geschiedenis van de kerk. 
+				33 na Christus 
+				Jezus is gekruisigd, begraven en opgestaan uit de dood. Hij ontmoet zijn leerlingen op de olijfberg. Hij weet: Ik ga naar mijn Vader in de hemel. Mijn werk hier op aarde zit erop. Mijn discipelen zijn er klaar voor om in Mijn naam de wereld te veroveren. Daarom geef Ik ze de grote opdracht mee: 
+				Jezus kwam op hen toe en zei: ‘Mij is alle macht gegeven in de hemel en op de aarde. Ga dus op weg en maak alle volken tot mijn leerlingen, door hen te dopen in de naam van de Vader en de Zoon en de heilige Geest, en hun te leren dat ze zich moeten houden aan alles wat ik jullie opgedragen heb. En houd dit voor ogen: ik ben met jullie, alle dagen, tot aan de voltooiing van deze wereld.’ (Mattheüs 28 vers 18-20)
+				Dat is nogal een behoorlijke opdracht. Gelukkig hoeven de leerlingen dit niet alleen te doen. Jezus zou niet stilzitten in de hemel. Hij zou hun de Heilige Geest sturen, die hen voor dit werk de kracht zou geven. Hierop moesten ze eerst wachten.
+			</p>
+			<h2>Opdracht 3</h2>
+			<p class="opdracht">
+				
+			<p>Lees de grote opdracht van Jezus hierboven nog eens goed.</p>
+				<ol type="a">
+					<li>
+						Welke drie dingen moeten de leerlingen van Jezus doen?
+						<input ng-model="answers._3a"><br>
+					</li>
+					<li>
+						Welke bemoediging geeft Jezus hen eerst?
+						<input ng-model="answers._3b"><br>
+					</li>
+					<li>
+						Welke belofte geeft Jezus hen daarna?
+						<input ng-model="answers._3c"><br>
+					</li>
+					<li>
+						Discussievraag: Wat hebben wij nog aan deze opdracht?
+						<input ng-model="answers._3d"><br>
+					</li>
+				</ol>
+			</p>	
+					
+
+			<p>
+			Op het Pinksterfeest kwam de heilige Geest. De leerlingen werden vervuld met de kracht van de overwinnende Heer. Vanaf dat moment zijn ze de straat op gegaan om de blijde boodschap over de Here Jezus te vertellen. En veel mensen kwamen tot geloof in Jezus. Deze mensen zochten elkaar op om met elkaar te praten over wat Jezus voor hen had gedaan. Verder wilden ze graag dat de leerlingen van Jezus, die nu apostelen genoemd worden, hen vertelden over wat Jezus hen geleerd had. Ze wilden alles weten over Jezus. Ze kwamen bij elkaar thuis samen en deelden alles met elkaar.
+			</p>
+			<h2>Opdracht 4</h2>
+			<p>
+			Lees Handelingen 4 vers 32 tot Handelingen 5 vers 16
+			<p>
+			<p class="opdracht">
+				<ol type="a">
+					<li>
+					Wat is er bijzonder aan deze eerste gemeente?
+					<input ng-model="answers._4a"><br>
+					</li>
+					<li>
+					Wat is de rol van de apostelen?
+					<input ng-model="answers._4b"><br>
+					</li>
+					<li>
+					Wat gaat er mis?
+					<input ng-model="answers._4c"><br>
+					</li>
+					<li>
+					Welke zonde doen Ananias en Saffira?
+					<input ng-model="answers._4d"><br>
+					</li>
+					<li>
+					Vind je dat ze te zwaar worden gestraft? Waarom wel/niet?
+					<input ng-model="answers._4e"><br>
+					</li>
+					<li>
+					Wat vindt het volk van de nieuwe kerk? (zie 5 vers 13)
+					<input ng-model="answers._4f"><br>
+					</li>
+					<li>
+					Praten de mensen in jouw woonplaats ook zo over jullie kerk? Waarom wel/niet?
+					<input ng-model="answers._4g"><br>
+					</li>
+				</ol>
+			</p>	
+			<div class="well" id="textArea" style="float:left"> 
+				<h2></h2>
+				<p>
+					Rabbi = Meester
+					<p></p>
+					Discipel = Leerling
+					<p></p>
+					Apostel = Gezant
+					<p></p>
+					Evangelie = de blijde boodschap of het goede nieuws<br>
+
+				</p>
+			</div>	
+			<div class="well" id="textArea" style="float:right"> 
+				<h2></h2>
+				<p>
+					De eerste gemeenten kwamen altijd samen op zondagochtend vroeg. 
+					Na de dienst gingen ze dan aan het werk. 
+					De mensen werkten toen gewoon op zondag, want de joodse sabbat is namelijk de zaterdag. 
+					Ze kwamen op zondag bij elkaar omdat dat de opstandingsdag van de Here Jezus is. 
+					Eigenlijk vieren we iedere zondag een beetje Pasen. 
+
+				</p>
+			</div>	
+	</body>
+</html>

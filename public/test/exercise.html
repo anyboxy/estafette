@@ -1,0 +1,153 @@
+<!doctype html>
+<html ng-app="infles-exercise">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+		<script src="/scripts/infles.js"></script>
+		<script src="/scripts/exercise.js"></script>
+
+		<!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		
+		<script src="ckeditor/ckeditor.js"></script>
+		
+		<!--
+		<script type="text/javascript" src="<your installation path>/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+		tinymce.init({
+		selector: "textarea"
+		});
+		</script>
+		
+		
+		
+		<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+			<script>
+        
+		tinymce.init({
+		selector: "textarea",
+		plugins: "moxiemanager link image",
+		toolbar: "insertfile link image",
+		menubar: false
+		});
+			</script>
+		
+		<script src="scripts/common/jquery-1.7.min.js" type="text/javascript"></script>
+		<script src="scripts/innovaeditor.js" type="text/javascript"></script>
+		<script src="scripts/innovamanager.js" type="text/javascript"></script>
+		
+		  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
+			`//<![CDATA[
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+		//]]>
+		</script>
+		 -->
+		
+	</head>
+<body ng-controller="UserCtrl">
+	<navigation></navigation>
+	<div ng-controller="exerciseCtrl" id="exerciseCtrl">
+		<ul>
+			<li ng-repeat="subExercise in subExercises">
+        <div class="well" ng-switch on="subExercise.type" id="question">
+
+          <div ng-switch-when="text">
+            <img src="{{subExercise.icon}}"></img>
+			<div class="btn-group btn-group-xs">
+				<button type="button" class="btn btn-default">
+					<span id="editIcon" class="glyphicon glyphicon-edit"></span> 
+				</button>
+				<button type="button" class="btn btn-default">
+					<span id="editIcon" class="glyphicon glyphicon-remove"></span> 
+				</button>
+				<button type="button" class="btn btn-default">
+					<span id="editIcon" class="glyphicon glyphicon-check"></span> 
+				</button>
+			</div>
+			<h1>test</h1>
+            <p>{{subExercise.content}}</p>
+            <iframe ng-repeat="link in subExercise.videos" width="853" height="480" ng-attr-src="{{link}}" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+    		 <div ng-switch-when="open-question">
+          <img src="{{subExercise.icon}}"></img>
+					<div class="btn-group btn-group-xs">
+						<button type="button" class="btn btn-default">
+							<span id="editIcon" class="glyphicon glyphicon-edit"></span> 
+						</button>
+						<button type="button" class="btn btn-default">
+							<span id="editIcon" class="glyphicon glyphicon-remove"></span> 
+						</button>
+						<button type="button" class="btn btn-default">
+							<span id="editIcon" class="glyphicon glyphicon-check"></span> 
+						</button>
+					</div>
+    			<p>{{subExercise.content}}</p>
+    			<form ng-submit="addAnswer()">
+				<br>
+				
+				<form>
+				<textarea class="ckeditor" name="editor1"></textarea>
+				
+					<textarea id="editor1" name="editor1" rows="10" cols="80">
+						This is my textarea to be replaced with CKEditor.
+					</textarea>
+					<script>
+						// Replace the <textarea id="editor1"> with a CKEditor
+						// instance, using default configuration.
+						CKEDITOR.replace( "editor1" );
+						CKEDITOR.replace( 'textarea_1' )
+					</script>
+				</form>
+				
+				<!--
+				<textarea id="textareaAnswer" 
+					ng-model="{open-question}"
+    				ng-required="{beantwoord de vraag!}"
+					 placeholder="typ hier je antwoord in"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </textarea>
+
+					http://innovastudio.com/BootstrapLiveEditor2/index.html
+					
+					
+						
+						<script type="text/javascript">
+							$(document).ready(function () {
+								$('#txtContent').liveEdit({
+									css: ['bootstrap/css/bootstrap.min.css', 'bootstrap/bootstrap_extend.css'] /* Apply bootstrap css into the editing area */ ,            
+									groups: [
+											["group1", "", ["Bold", "Italic", "Underline", "ForeColor", "RemoveFormat"]],
+											["group2", "", ["Bullets", "Numbering", "Indent", "Outdent"]],
+											["group3", "", ["Paragraph", "FontSize", "FontDialog", "TextDialog"]],
+											["group4", "", ["LinkDialog", "ImageDialog", "TableDialog", "Emoticons", "Snippets"]],
+											["group5", "", ["Undo", "Redo", "FullScreen", "SourceDialog"]]
+											] /* Toolbar configuration */
+								});
+								$('#txtContent').data('liveEdit').startedit(); /* Run the Editor */
+							});
+						</script>
+    					-->
+				<br>
+    				<div class="btn-group">
+    					<button type="button" class="btn btn-default">Antwoord opslaan</button>
+    				</div>
+    			</form>
+        </div>
+		 
+			</li>
+			
+		</ul>
+	</div>
+	
+	
+</body>
+
+</html>
+
+<!-- html editor: http://www.tinymce.com/ -->

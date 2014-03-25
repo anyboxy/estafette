@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="infles-dashboard">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+		
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+
+    	<script src="/scripts/infles.js"></script>
+		<script src="/scripts/dashboard.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+	
+<body ng-controller="UserCtrl">
+<navigation></navigation>
+<div ng-controller="DashboardCtrl" id="DashboardCtrl">
+<center>
+<a href="/inleiding.html" >
+	<button  id="inleiding" class="btn btn-default" >Inleiding</button>
+</a></center>
+    <!--<div class="panel panel-default" id="opdrachtenlijst">-->
+      <div class="panel-heading">
+        <h1><!--class="panel-title"--><center>Tijdlijn</center></h1>
+      </div>
+	<center> 
+    <ul class='timeline'>
+    <li class="year">0</li>
+    <li class='event offset-first'>
+		<a href="exercise/hoofdstuk1">Het ontstaan van de kerk
+		<br><img src="images/hoofdstuk1.jpg" width="150"></a>
+    </li>
+	<li class='event'>
+        <a href="exercise/hoofdstuk2">De kerk bedreigd
+		<br><img src="images/hoofdstuk2.jpg" width="150"></a>
+    </li>
+	<li class='event'>
+        <a href="exercise/hoofdstuk3">Dwalingen in de kerk
+		<br><img src="images/hoofdstuk3.jpg" width="150"></a>
+    </li>
+    <li class="year">100</li>
+	<li class="year">200</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk4">Een ommekeer
+		<br><img src="images/hoofdstuk4.png" width="150"></a>
+    </li>
+	<li class="year">300</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk5">Kerkvader Aurelius Augustinus
+		<br><img src="images/hoofdstuk5.jpg" width="150"></a>
+    </li>
+	<li class="year">400</li>
+	<li class='event offset-first'>
+        <a href="exercise/verdieping">Verdieping: volksverhuizing
+		<br><img src="images/verdieping.jpg" width="150"></a>
+    </li>
+	<li class="year">500</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk6">Paus Gregorius
+		<br><img src="images/hoofdstuk6.jpg" width="150"></a>
+    </li>
+	<li class='event'>
+        <a href="exercise/hoofdstuk7">De Islam
+		<br><img src="images/hoofdstuk7.jpg" width="150"></a>
+    </li>
+	<li class="year">600</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk8">Evangelie in de Lage Landen
+		<br><img src="images/hoofdstuk8.jpg" width="150"></a>
+    </li>
+	<li class="year">700</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk9">Karel de Grote
+		<br><img src="images/hoofdstuk9.jpg" width="150"></a>
+    </li>
+	<li class="year">800</li>
+	<li class="year">900</li>
+	<li class="year">1000</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk10">De Kruistochten
+		<br><img src="images/hoofdstuk10.jpg" width="150"></a>
+    </li>
+	<li class="year">1100</li>
+  </ul>
+	</center>
+</div>
+</body>
+
+</html>
