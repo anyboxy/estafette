@@ -222,6 +222,7 @@ exports.install = function(app) {
 			var users = [];
 			for (var i = 0; i < data.length; i+=2) {
 				if (data[i].length == 0) {
+					i--;
 					continue;
 				}
 				var user = {_id: data[i], password: data[i + 1]};
