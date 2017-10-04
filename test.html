@@ -1,0 +1,26 @@
+<html>
+<!-- a test file for testing the api's-->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
+<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+		
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+
+<script src="/scripts/ng-videosharing-embed.min.js"></script>
+<script src="/scripts/infles.js"></script>
+<script src="/scripts/exercise.js"></script>
+
+<script>
+alert("ok\n");
+$http.post("/api/login" + $scope.exercise, {_id:3})
+	.success(function(data) {
+		if (data.result === true) {
+			window.location = "/dashboard";
+		}
+	})
+	.error(function(data) {
+	alert(data);
+	});
+</script>
+</html>

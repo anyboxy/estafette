@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="infles-login" lang="en">
+  <head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+		<script src="/scripts/infles.js"></script>
+		<script src="/scripts/login.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+<body id="login" ng-controller="UserCtrl">
+	<navbar></navbar>
+	<br><br><br><br><br><br>
+	<div class="well">
+  <div ng-controller="LoginController" ng-show="userCtrlReady">
+	  <div ng-hide="user">
+
+		<form class="form-horizontal" action="" ng-submit="login()">
+		<!--
+		  <table id="table">
+			<tr>
+			-->
+				<div class="form-group">
+				<!--
+					<td>
+					-->
+						<label id="loginTitle" for="inputEmail3" class="col-sm-2 control-label">Leerlingnr.</label>
+						<!--
+					</td>
+					<td>
+					-->
+						<div class="col-sm-10">
+						<input  id="loginText" ng-model="username" class="form-control" name="username" type="text" placeholder="Leerlingnummer" required />
+						</div>
+						<!--
+					</td>	
+					-->
+				</div>
+				<!--
+			</tr>	
+			<tr>
+			-->
+				<div class="form-group">
+				<!--
+					<td>
+					-->	
+						<label id="loginTitle" for="inputEmail3" class="col-sm-2 control-label">Klas</label>
+						<!--
+					</td>
+					<td>
+					-->
+						<div class="col-sm-10">
+							<input  id="loginText" ng-model="classes" class="form-control" name="classes" type="klas" placeholder="leerlingnummer" required />
+						</div>
+						<!--
+					</td>
+					-->
+				</div>
+				<!--
+			</tr>
+			<tr>
+			-->
+				<div class="form-group">
+				<!--
+					<td>
+					-->
+						<label id="loginTitle" for="inputEmail3" class="col-sm-2 control-label">Postcode</label>
+						<!--
+					</td>
+					<td>
+					-->
+						<div class="col-sm-10">
+							<input  id="loginText" ng-model="password" class="form-control" name="password" type="Postcode" placeholder="Postcode" required />
+						</div>
+						<!--
+					</td>
+					-->					
+				</div>
+				<!--
+			</tr>
+			<tr>
+				<td>
+				</td>
+				-->
+				<!--<td id="buttonInlog">-->
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default">Log in</button>
+						</div>
+					</div>
+					<!--
+				</td>
+			</tr>	
+		</table>
+		
+		  <fieldset>
+			<legend>Login</legend>
+			<p><input ng-model="login._id" class="form-control" name="_id" type="text" placeholder="Leerlingnummer" required /></p>
+			<p><input ng-model="login.classes" name="classes" type="Klas" placeholder="Klas" required /></p>
+			<p><input ng-model="login.password" name="password" type="Postcode" placeholder="Postcode" required /></p>
+		
+			<p><button type="submit">Login</button></p>
+		  </fieldset>
+		  	-->
+		</form>
+	  </div>
+	
+	  
+	</div>
+</div>
+</html>
+
+<!-- leerlingnr: 123 postcode: 1111AA 
+reset: /api/reset
+-->

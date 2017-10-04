@@ -1,0 +1,5 @@
+api.js:
+
+moved the api/reset call after the login check
+added an auth check in api/execercises
+added the api/userlist call

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="infles-login" lang="en">
+  <head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+		<script src="/scripts/infles.js"></script>
+		<script src="/scripts/register.js"></script>
+		
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+<body id="login" ng-controller="UserCtrl" >
+	<navbar></navbar>
+	<br><br><br><br><br><br>
+	<div class="well" ng-controller="RegisterController">
+		  registreer een nieuwe gebruiker
+		  <form action="" ng-submit="register()">
+			  <div class="form-group" class="form-horizontal">
+			  		<label id="loginTitle" for="inputEmail3" class="col-sm-3 control-label">Leerlingnr.</label>
+			  		
+			  		<div class="col-sm-10">
+				 	<input  id="username" ng-model="username" class="form-control" name="username" type="klas" placeholder="leerlingnummer" required />
+				 	</div>
+				 	<label id="loginTitle" for="inputEmail3" class="col-sm-3 control-label">wachtwoord:</label>
+				 	<br><br><br>
+				 	<div class="col-sm-10">
+					<input  id="password" ng-model="password" class="form-control" name="password" type="password" placeholder="wachtwoord" required />
+					</div>
+					<br><br><br>
+					<label id="loginTitle" for="inputEmail3" class="col-sm-3 control-label">bevestig wachtwoord:</label>
+					<div class="col-sm-10">
+					<input  id="password2" ng-model="password2" class="form-control" name="password2" type="password" placeholder="bevestig wachtwoord" required />
+					</div>
+					<br><br><br><br><br>
+					<label id="loginTitle" for="inputEmail3" class="col-sm-3 control-label">kies je leerlijn:</label>
+					<div class="col-sm-10">
+					<select id=edLevelSelect> </select>
+					</div>
+					<br><br><br><br><br>
+					<div class="form-group">
+						<div class="col-sm-offset-0 col-sm-11">
+							<button type="submit" class="btn btn-default">registreer<br></button>
+						</div>
+					</div>
+					<br><br><br>
+					<a href="/login">terug naar login</a>
+			</div>
+		  </form>
+</div>
+</html>
+
+<!-- leerlingnr: 123 postcode: 1111AA 
+reset: /api/reset
+-->

@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>admin page</title>
+</head>
+<body>
+<a href="/cmanager">content manager</a><br>
+<a href="/dbmanager">database manager</a><br>
+</body>
+</html>

@@ -8,7 +8,7 @@ exports.install = function(app) {
 	var dbDefinition = {
 		user: {
 			_id: {type: "string", required: true, sort: true},
-			classes: {type: "string", array: true, required: true},
+			classes: {type: "string", array: true, required: false},
 			password: {type: "string", required: true}
 		},
 		answer: {
@@ -16,7 +16,12 @@ exports.install = function(app) {
 			user: {type: "string", required: true},
 			exercise: {type: "string", required: true},
 			field: {type: "string", required: true},
-			answer: {type:  "string", required: false}
+			answer: {type:  "string", required: false},
+			edLevel: {type: "string", required: true}
+		},
+		edLevel:{
+			_id: {type: "string", required: false, sort: true},
+			name:{type: "string", required: true}
 		}
 	};
 
@@ -136,7 +141,70 @@ exports.install = function(app) {
 			});
 		})
 	};
+	
+	app.post("/api/login", function(req, res) {
+		var q = {_id: req.body.username, password: req.body.password};
+		db.collection("users").findOne(q, function(error, result) {
+			if (result) {
+				req.session.user = result;
+				console.log(result);
+				res.send({result: result})
+			} else {
+				console.log(error)
+				res.send({result: false});
+			}
+		});
+	});
 
+	app.all("/api/logout", function(req, res) {
+		if (req.session.user) {
+			delete req.session.user;
+			res.send({result: true});
+		} else {
+			res.send({result: false, error: "you weren't even logged in yet!"});
+		}
+	});
+
+	app.post("/api/addUser", function(req, res) {//working
+			console.log(req.body);
+		if(!req.body)
+			res.send({result:false});
+		
+		var newUser = parseItem(dbDefinition.user, req.body);
+		
+		if(!newUser)
+			res.send({error:"kan geen gebruiker maken"});
+		
+		var cursor = db.collection("users").find({_id: newUser._id});
+		cursor.toArray(function(error, array) {
+				
+				if(array[0])
+					res.send({error: "fout: gebruiker bestaat al!"});
+		});
+		
+		db.collection('users').save(newUser, function(err, result) {
+			if (!err) {
+				res.send({result:true});
+			}
+		});
+	});
+	
+	app.get("/api/getEducationLevels", function(req, res) {//working
+			var list = fs.readdirSync('./edLevels');
+			res.send(list);
+	});
+	
+	
+	// token parser
+	// commented out for debugging purposes
+	app.all("/api/*", function(req, res, next) {
+		if (req.session.user == undefined) {
+			res.send({result: false, error: "You aren't logged in which is required to use the api's"});
+		} else {
+			next();
+		}
+	});
+	
 	app.get("/api/reset", function(req, res) {
 		for (collName in dbDefaults) {
 			new function (collName) {
@@ -152,43 +220,12 @@ exports.install = function(app) {
 		res.send({result: true});
 	});
 
-	app.post("/api/login", function(req, res) {
-		var q = {_id: req.body.username, password: req.body.password};
-		console.log(req.body);
-		db.collection("users").findOne(q, function(error, result) {
-			if (result) {
-				req.session.user = result;
-				res.send({result: result})
-			} else {
-				res.send({result: false});
-			}
-		});
-	});
-
-	app.all("/api/logout", function(req, res) {
-		if (req.session.user) {
-			delete req.session.user;
-			res.send({result: true});
-		} else {
-			res.send({result: false, error: "you weren't even logged in yet!"});
-		}
-	});
-
-	// token parser
-	app.all("/api/*", function(req, res, next) {
-		if (req.session.user == undefined) {
-			res.send({result: false, error: "You aren't logged in which is required to use the api's"});
-		} else {
-			next();
-		}
-	});
-
 	app.get("/api/me", function(req, res) {
 		res.send({result: req.session.user});
 	});
 
 	app.get("/api/answers/:exercise", function(req, res) {
-		var cursor = db.collection("answers").find({user: req.session.user._id, exercise: req.params.exercise});
+		var cursor = db.collection("answers").find({user: req.session.user._id, exercise: req.params.exercise, edLevel: req.session.user.edLevel});
 		cursor.toArray(function(error, array) {
 			res.send({result: array});
 		});
@@ -197,7 +234,14 @@ exports.install = function(app) {
 	app.post("/api/answers/:exercise", function(req, res) {
 		var answersSaved = 0;
 		for (var i = 0; i < req.body.length; i++) {
+			req.body[i].edLevel = req.session.user.edLevel;
 			var answer = parseItem(dbDefinition.answer, req.body[i]);
+			if(answer.user != req.session.user._id){
+				//log and quit
+				res.send({result:false})
+				return;
+			}
+			answer.edLevel = req.session.user.edLevel
 			answer._id = answer.user + "_" + answer.exercise + "_" + answer.field;
 			db.collection("answers").save(answer, function(error, result) {
 				answersSaved++;
@@ -208,6 +252,16 @@ exports.install = function(app) {
 		}
 	});
 
+	
+	
+	
+	app.all("/api/*", function(req, res, next) {
+		if (!req.session.user.isAdmin) {
+			res.send({result: false, error: "You are not an admin!"});
+		} else {
+			next();
+		}
+	});
 	app.get("/upload", function(req, res) {
 		res.sendfile("upload.html");
 	});
@@ -228,7 +282,7 @@ exports.install = function(app) {
 				var user = {_id: data[i], password: data[i + 1]};
 				users.push(user);
 			}
-			var numDone = 0;
+			var numDone = 0;s
 			for (var i = 0; i < users.length; i++) {
 				db.collection('users').save(users[i], function(err, result) {
 					numDone++;
@@ -239,7 +293,106 @@ exports.install = function(app) {
 			}
 		});
 	});
+	
+	app.get("/api/getUserList", function(req, res) {//working
+		//we need to add some admin-level checking like this:
+		/*if(req.session.user.auth_level != admin){
+			res.send("not authorized\n");
+			return;
+		}*/
+		
+		//same as getEducationLevels
+		var i = 0;
+		var list = Array();
+		
+		db.collection("users").find().each(function(err,result){
+			if(!result){
+				res.send(JSON.stringify(list));
+				return
+			}
+			
+			list[i] = result;
+			i++;	
+		});
+	});
 
+	app.post("/api/updateUser", function(req, res) {//not tested
+		var user = req.body;
+		if(!user)
+			res.send({result:false});
+		
+		db.collection('users').update({_id:user._id},user, function(err, result) {
+			if (!err) {
+				res.send({result:true});
+			}
+		});
+		
+	});
+
+	app.post("/api/removeUser", function(req, res) {//working
+		var id = req.body._id
+		
+		if(!id)
+			res.send({result:false});
+		else 
+		{
+			db.collection('users').remove({_id:id},function(err,result){
+			if(!err)   
+				res.send({result:true});
+			else
+				res.send({result:dberror});
+			});	
+		}
+			
+		
+	});
+	
+	
+	
+	app.post("/api/addEducationLevels", function(req, res) {
+		if(!req.body)
+			res.send({result:false});
+		
+		var newEdLevel = parseItem(dbDefinition.edLevel, req.body);
+		
+		if(!newUser)
+			res.send({result:"no definition"});
+		
+		db.collection('EducationLevels').save(newEdLevel, function(err, result) {
+			if (!err) {
+				res.send({result:true});
+			}
+		});
+	});
+	
+	app.post("/api/removeEducationLevels", function(req, res) {
+	});
+	
+	app.post("/api/getChapters", function(req, res) {
+			var list = fs.readdirSync('./edLevels/'+req.body.name);
+			res.send(list);
+	});
+	
+	app.post("/api/createChapter", function(req, res) {
+			
+			var file = fs.readFileSync(req.files.file.path, {encoding: "utf8"});
+			
+			fs.writeFileSync("./edLevels/"+req.body.edLevel+"/"+req.body.name,file,{encoding: "utf8"});
+			res.redirect("cmanager");
+	});
+
+	app.post("/api/removeChapter", function(req, res) {
+	});
+	
+	app.post("/api/updateChapter", function(req, res) {
+	});
+	
+	app.post("/api/getContent", function(req, res) {
+	});
+	
+	
+	
+	
 };
 
 module.exports = exports;

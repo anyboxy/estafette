@@ -1,0 +1,150 @@
+<!doctype html>
+<html ng-app="infles-dashboard">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+		
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+
+    	<script src="/scripts/infles.js"></script>
+		<script src="/scripts/dashboard.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+	
+<body ng-controller="UserCtrl">
+<navigation></navigation>
+<div ng-controller="DashboardCtrl" id="DashboardCtrl">
+<center>
+<a href="/inleiding.html" >
+	<button  id="inleiding" class="btn btn-default" >Inleiding</button>
+</a>
+<button  id="inleiding" class="btn btn-default" onClick="window.location.hash='1400';">Ga naar 1400</button></center>
+    <!--<div class="panel panel-default" id="opdrachtenlijst">-->
+      <div class="panel-heading">
+        <h1><!--class="panel-title"--><center>Tijdlijn</center></h1>
+      </div>
+	<center> 
+    <ul class='timeline'>
+    <li class="year">0</li>
+    <li class='event offset-first'>
+		<a href="exercise/hoofdstuk1">Het ontstaan van de kerk (30 na Chr.)
+		<br><img src="images/hoofdstuk1.jpg" width="150"></a>
+    </li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+	<li class='event'>
+        <a href="exercise/hoofdstuk2">De kerk bedreigd (70 na Chr.)
+		<br><img src="images/hoofdstuk2.jpg" width="150"></a>
+    <li class="year">100</li>
+    </li>
+	<li class="year">200</li>
+	<li class='event'>
+        <a href="exercise/hoofdstuk3">De Bijbel (250 na Chr.)
+		<br><img src="images/VMBOhoofdstuk3.jpg" width="150"></a>
+		</li>
+	<li class="year">300</li>
+	<li class='event' style="display: none;"></li>
+	<li class='event'>
+        <a href="exercise/hoofdstuk4">Een ommekeer (320 na Chr.)
+		<br><img src="images/hoofdstuk4.png" width="150"></a>
+	</li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>	
+		<li class='event' style="display:none"></li>
+		<li class="year">400</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk5">Kerkvader Aurelius Augustinus (400 na Chr.)
+		<br><img src="images/hoofdstuk5.jpg" width="150"></a>
+    </li>
+
+	<li class="year">500</li>
+	<br>
+	<br>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk6">'Extra stof: Paus Gregorius (550 na Chr.)
+		<br><img src="images/hoofdstuk6.jpg" width="150"></a>
+    </li>
+    <br>
+    <br>
+
+	<li class="year">600</li>
+	<li class='event' style="display: none;"></li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk7">De Islam (620 na Chr.)
+		<br><img src="images/hoofdstuk7.jpg" width="150"></a>
+		</li>
+	<li class="year">700</li>
+	<li class='event' style="display: none;"></li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk8">Evangelie in de Lage Landen (700 na Chr.)
+		<br><img src="images/hoofdstuk8.jpg" width="150"></a>
+    </li>
+	
+        
+	<li class="year">800</li>
+	<li class='event' style="display:none"></li>
+	<li class='event offset-first'>
+	<a href="exercise/hoofdstuk9">Karel de Grote (800 na Chr.)
+		<br><img src="images/hoofdstuk9.jpg" width="150"></a>
+    </li>
+	<li class="year">900</li>
+	<li class="year">1000</li>
+	<li class="year">1100</li>
+	<li class='event offset-first'>
+        <a href="exercise/hoofdstuk10">De Kruistochten (1100 na Chr.)
+		<br><img src="images/hoofdstuk10.jpg" width="150"></a>
+	<li class="year">1200</li>
+	<li class='event' style="display: none;"></li>
+	<li class='event offset-first'>
+	<a href="exercise/hoofdstuk14">De macht van de Rooms Katholieke kerk (1220 na Chr.)
+	<br><img src="images/hoofdstuk14.jpg" width="150"></a>
+	</li>
+	<li class="year">1300</li>
+	<a name="1400"> </a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<li class='event offset-first'>
+	<a href="exercise/hoofdstuk11">voorlopers van de reformatie (1380 na Chr.)
+	<br><img src="images/hoofdstuk11.jpg" width="150"></a>
+	<li class="year">1400</li>
+	<li class="year">1500</li>
+	<li class='event offset-first'>
+	<a href="exercise/hoofdstuk12">De Reformatie (1520 na Chr.)
+	<br><img src="images/hoofdstuk12.jpg" width="150"></a>
+	</li>
+	<br><br><br>
+	<li class="year">1600</li>
+	<li class='event'>
+	<a href="exercise/hoofdstuk13">Godsdienststrijd in Nederland (1610 na Chr.)
+	<br><img src="images/hoofdstuk13.jpg" width="150"></a>
+	</li>
+	<li class="year">1700</li>
+	<li class="year">1800</li>
+	
+	
+	
+	
+	</li>	
+  </ul>
+	</center>
+</div>
+</body>
+
+</html>

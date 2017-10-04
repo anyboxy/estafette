@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="infles-dashboard">
+	<head>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js">
+		</script>
+		<script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js">
+		</script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+		
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+
+    	<script src="/scripts/infles.js"></script>
+		<script src="/scripts/dashboard.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+	
+<body ng-controller="UserCtrl">
+<navigation></navigation>
+<div ng-controller="DashboardCtrl" id="DashboardCtrl">
+<center>
+<a href="/inleiding.html" >
+	<button  id="inleiding" class="btn btn-default" >Inleiding</button>
+</a></center>
+    <!--<div class="panel panel-default" id="opdrachtenlijst">-->
+      <div class="panel-heading">
+        <h1><!--class="panel-title"--><center>Tijdlijn</center></h1>
+      </div>
+	<center> 
+    <ul class='timeline'>
+    <li class="year">0</li>
+    <li class='event offset-first'>
+		<a href="exercise/hoofdstuk1">De macht van de Rooms Katholieke Kerk
+		<br><img src="images/VMBOhoofdstuk1.jpg" width="150"></a>
+    </li>
+    <li class="year">1000</li>
+    <li class='event offset-first'>
+		<a href="exercise/hoofdstuk2">Verval
+	van de Rooms Katholieke Kerk
+		<br><img src="images/VMBOhoofdstuk1.jpg" width="150"></a>
+    </li>
+
+	</li>	
+  </ul>
+	</center>
+</div>
+</body>
+
+</html>

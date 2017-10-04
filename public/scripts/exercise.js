@@ -4,7 +4,7 @@ var infex = angular.module('infles-exercise', ['infles', 'videosharing-embed']);
 infex.config(['$sceProvider', function($sceProvider) {
     $sceProvider.enabled(false);
 }]);
-
+dataOld = []
 function ExerciseCtrl($scope, $location, $modal, $http) {
 
 	$scope.answers = {};
@@ -41,6 +41,31 @@ function ExerciseCtrl($scope, $location, $modal, $http) {
 			.error(function(data) {
 			});
 	};
+	
+	
+	$scope.saveShort = function() {
+		var data = [];
+		for (var field in $scope.answers) {
+			data.push({
+				user: $scope.user._id, 
+				exercise: $scope.exercise, 
+				field: field, 
+				answer: $scope.answers[field]
+			});
+		}
+		if(dataOld != JSON.stringify(data))
+		{
+				dataOld = JSON.stringify(data);
+		$http.post("/api/answers/" + $scope.exercise, data)
+			.success(function(data) {
+			})
+			.error(function(data) {
+			});
+		}
+
+	};
+	
+	setInterval(function () {$scope.saveShort()}, 3000);
 
 	$scope.openDialog = function(template, scope) {
 		$modal.open({

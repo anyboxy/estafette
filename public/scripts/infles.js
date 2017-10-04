@@ -10,8 +10,8 @@ infles.directive('navigation', function() {
 '			<nav class="navbar navbar-default" role="navigation">' + 
 '				<ul class="nav navbar-nav navbar-left">' + 
 '					<li><a href="/dashboard"><img src="/images/logo.png"></a></li>' +
-'                   <li><a href="http://www.biblija.net/biblija.cgi?l=nl" target="blank"><img src="/images/bijbel.jpg" height="82"></a></li>' +
-'                   <li><a href="http://www.prezi.com/" target="blank"><img src="/images/prezi.png" height="82"></a></li>' +
+'                   <li><a href="http://debijbel.nl" target="blank"><img src="/images/bijbel.jpg" height="82"></a></li>' +
+'                   ' +
 '				</ul>' +
 '				<ul class="nav navbar-nav navbar-right">' +
 '					<li><button type="button" class="btn btn-default navbar-btn" ng-click="logout()">Uitloggen</button></li>' +

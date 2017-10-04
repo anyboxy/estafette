@@ -10,7 +10,8 @@ var LoginController = function($scope, $http) {
 				$scope.isAdmin = $scope.user.role == "teacher";
                 window.location = "/dashboard";
             } else {
-                // error handeling
+            		alert("verkeerde gebruikersnaam of wachtwoord!");
+  
             }
         });
     };
