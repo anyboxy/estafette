@@ -10,11 +10,13 @@ var http = require('http');
 var path = require('path');
 var api = require('./api');
 
-var app = express();
+self.app = express();
 
 // all environments
-app.set('ipaddress', process.env.OPENSHIFT_NODEJS_IP);
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8888);
+//app.set('ipaddress', process.env.OPENSHIFT_NODEJS_IP);
+//app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8888);
+self.ipaddress = '0.0.0.0'
+self.port = 8080;
 app.use(express.cookieParser());
 app.use(express.session({secret: "infles_rocks"}))//lol
 app.use(express.logger('dev'));
